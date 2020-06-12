@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  color: #204051;
+}
+
+button {
+  margin: 1% !important;
+}
+
+input {
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+table {
+  text-align: center !important;
+}

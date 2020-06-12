@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BreakIt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      Developed by Johnny Azulay
+    </nav>
+    <div class="ui container">
+      <h1 id="message">Let's try to open the safe</h1>
+      <h2 id="timer">Press check to start the timer</h2>
+      <div class="ui image">
+        <img id="safeImg" src="img/safe.png" alt="safe" />
+      </div>
+
+      <div id="addError" class="ui input">
+        <input
+          placeholder="Guess four digits"
+          type="number"
+          id="code"
+          maxlength="4"
+          oninput="checkNumberFieldLength(this)"
+        />
+      </div>
+      <div id="butBtnHere">
+        <button
+          onclick="setTimeout(countDown(20), 1000)"
+          id="checkBtn"
+          class="ui primary button"
+        >
+          Check
+        </button>
+      </div>
+
+      <div id="butBtnHere2">
+        <button onclick="showCodes()" id="showBtn" class="ui button">
+          Show previous cases
+        </button>
+      </div>
+      <button onclick="deleteAll()" id="deleteAll" class="ui red button">
+        Clear All
+      </button>
+
+      <div id="result"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
